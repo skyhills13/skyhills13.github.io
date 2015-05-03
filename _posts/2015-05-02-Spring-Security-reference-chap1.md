@@ -10,7 +10,7 @@ description: 스프링 시큐리티 레퍼런스 Part II Chap1 시작하기 부�
 
 이 가이드의 후반부에서는 심도있는 사용자 정의를 하기 위해 이해해야하는 프레임워크 아키텍쳐와 클래스 구현에 대해 깊이있게 다룬다. 반면 이 파트에서는, Spring Security 3.0을 소개하고, 프로젝트 역사에 대해 간단하게 개괄한다. 또, 프레임워크 사용하는 방법에 대해 살짝 들여다본다. 특히, 개별 구현 클래스 전부를 직접 묶어야 했던 전통적인 Spring bean 접근법에 비해 훨씬 간단한 방법인 namespace 설정 방법으로 어플리케이션을 안전하게 하는 것에 대해 살펴본다. 
 
-또, 예제 어플리케이션도 살펴본다. 예제로 실습을 하면, 후반부를 읽는데에 도움이 될 것이다 - 프레임워크에 대한 이해도가 높아진 후에 실습하는 것도 괜찮다. 다음의 웹사이트 [project website] (http://static.springsource.org/spring-security/site/index.html) 를 방문하면 프로젝트를 빌드하는데 유용한 정보와 글, 영상, 튜토리얼을 확인할 수 있다.
+또, 예제 어플리케이션도 살펴본다. 예제로 실습을 하면, 후반부를 읽는데에 도움이 될 것이다 - 프레임워크에 대한 이해도가 높아진 후에 실습하는 것도 괜찮다. 다음의 웹사이트 [project website](http://static.springsource.org/spring-security/site/index.html) 를 방문하면 프로젝트를 빌드하는데 유용한 정보와 글, 영상, 튜토리얼을 확인할 수 있다.
 
 
 ### 1. 도입
@@ -127,7 +127,7 @@ Spring Security를 불러오는 방법에는 몇가지가 있다. 메인 페이�
 
 <Strong>pom.xml</Strong>
 
-```
+```xml
 <dependencies>
 <!-- ... other dependency elements ... -->
 <dependency>
@@ -154,7 +154,7 @@ SNAPSHOT 버전을 사용한다면, 아래와 같은 Spring Snapshot repository�
 
 <Strong>pom.xml</Strong>
 
-```
+```xml
 <repositories>
 <!-- ... possibly other repository elements ... -->
 <repository>
@@ -169,7 +169,7 @@ milestone 이나 release candidate 버전을 사용한다면, 아래와 같은 S
 
 <Strong>pom.xml</Strong>
 
-```
+```xml
 <repositories>
 <!-- ... possibly other repository elements ... -->
 <repository>
@@ -185,11 +185,11 @@ milestone 이나 release candidate 버전을 사용한다면, 아래와 같은 S
 
 Spring Security는 스프링 프레임워크의 버전 4.1.6.RELEASE 와 달라도 빌드될 수 있다. 하지만 4.0.x 대의 버전이어야 한다. 많은 유저들이 이러한 Spring Security의 이행적 의존성(transitive dependencies)이 스프링 프레임워크 4.1.6.RELEASE에 녹아드는 것(resolve)으로 인해 이상한 클래스패스 문제에 빠진다.
 
-이 문제를 피하는 하나의 (따분한) 방법은 pom에 모든 스프링 프레임워크 모듈 [[ dependencyManagement | http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Management]] 을 포함시키는 것이다. 다른 방법으로는 아래와 같이 `pom.xml`의 `<dependencyManagement>` 섹션에 `spring-framework-bom`를 포함시키는 것이다:
+이 문제를 피하는 하나의 (따분한) 방법은 pom에 모든 스프링 프레임워크 모듈 [ dependencyManagement](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Management) 을 포함시키는 것이다. 다른 방법으로는 아래와 같이 `pom.xml`의 `<dependencyManagement>` 섹션에 `spring-framework-bom`를 포함시키는 것이다:
 
 <Strong>pom.xml</Strong>
 
-```
+```xml
 <dependencyManagement>
 	<dependencies>
 	<dependency>
@@ -205,7 +205,7 @@ Spring Security는 스프링 프레임워크의 버전 4.1.6.RELEASE 와 달라�
 
 이 방법이 Spring Security의 모든 이행적 의존성이 Spring 4.1.6.RELEASE 모듈을 사용하도록 만들 것이다.
 
-NOTE: 이 접근법은 메이븐의 "bill of materials" (BOM) 컨셉을 이용했고, 메이븐 2.0.9 이후 부터 가능한 방법이다. 의존성이 어떻게 녹아드는지에 대한 추가적인 정보는 [Maven's Introduction to the Dependency Mechanism documentation | http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html ]를 참고하라.
+NOTE: 이 접근법은 메이븐의 "bill of materials" (BOM) 컨셉을 이용했고, 메이븐 2.0.9 이후 부터 가능한 방법이다. 의존성이 어떻게 녹아드는지에 대한 추가적인 정보는 [Maven's Introduction to the Dependency Mechanism documentation](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)를 참고하라.
 
 
 #### 1.4.2 Gradle
@@ -214,7 +214,7 @@ NOTE: 이 접근법은 메이븐의 "bill of materials" (BOM) 컨셉을 이용�
 
 <strong>build.gradle</strong>
 
-```
+```groovy
 dependencies {
 	compile 'org.springframework.security:spring-security-web:{spring-security-version}'
 	compile 'org.springframework.security:spring-security-config:{spring-security-version}'
@@ -230,7 +230,7 @@ dependencies {
 
 <strong>.build.gradle</strong>
 
-```
+```groovy
 repositories {
 	mavenCentral()
 }
@@ -240,7 +240,7 @@ SNAPSHOT 버전을 사용한다면, 아래와 같이 정의된 Spring Snapshot r
 
 <strong>.build.gradle</strong>
 
-```
+```groovy
 repositories {
 	maven { url 'https://repo.spring.io/snapshot' }
 }
@@ -250,7 +250,7 @@ milestone 이나 release candidate 버전을 사용한다면, 아래와 같은 S
 
 <strong>.build.gradle</strong>
 
-```
+```groovy
 repositories {
 	maven { url 'https://repo.spring.io/milestone' }
 }
@@ -259,11 +259,11 @@ repositories {
 
 ###### Spring 4.0.x 과 Gradle
 
-그래들은 transitive 버전을 변환할 때 디폴트로 최신의 버전을 사용한다. 즉, Spring Security 4.0.1.RELEASE 를 Spring Framework 4.1.6.RELEASE에서 사용할 때, 다른 추가적인 작업이 필요 없을 수도 있다는 뜻이다. 그러나 문제가 생길 수도 있으므로 아래와 같이 [[ Gradle's ResolutionStrategy | http://www.gradle.org/docs/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html ]]를 이용해서 사전에 방지하는 것이 좋겠다:
+그래들은 transitive 버전을 변환할 때 디폴트로 최신의 버전을 사용한다. 즉, Spring Security 4.0.1.RELEASE 를 Spring Framework 4.1.6.RELEASE에서 사용할 때, 다른 추가적인 작업이 필요 없을 수도 있다는 뜻이다. 그러나 문제가 생길 수도 있으므로 아래와 같이 [ Gradle's ResolutionStrategy ](http://www.gradle.org/docs/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html)를 이용해서 사전에 방지하는 것이 좋겠다:
 
 <strong>build.gradle</strong>
 
-```
+```groovy
 configurations.all {
 	resolutionStrategy.eachDependency { DependencyResolveDetails details ->
 		if (details.requested.group == 'org.springframework') {
