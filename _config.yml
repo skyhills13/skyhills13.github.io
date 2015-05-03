@@ -17,4 +17,5 @@ lsi: false
 paginate : 5
 
 # Personal Info path
-# aboutme_photo: 
+aboutme: 프로젝트에 대한 기록부터 잡다한 관심사에 대한 기록까지 남기는 개인 블로그   
+aboutme_photo: "/images/profile.png" 
