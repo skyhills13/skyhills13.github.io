@@ -2,7 +2,7 @@
 layout : post
 title : Spring Security reference 번역 시작
 category: blog
-tags: [Spring, open_source, java, security, translation ]
+tags: [spring_security, open_source, java, translation ]
 ---
 
 #
