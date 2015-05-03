@@ -1,9 +1,5 @@
 # Site settings
 title: skyhills blog
-description: > 
- 블로그 테스트 중
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://skyhills13.github.com" # the base hostname & protocol for your site
 
 # Build settings:
 markdown: kramdown
