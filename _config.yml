@@ -9,6 +9,10 @@ ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on ab
 # Build settings:
 markdown: kramdown
 
+kramdown:
+    input: GFM
+    hard_wrap: false
+
 highlighter: pygments
 permalink: pretty
 safe: true

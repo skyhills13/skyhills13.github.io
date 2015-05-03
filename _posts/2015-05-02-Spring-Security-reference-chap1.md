@@ -10,7 +10,7 @@ description: 스프링 시큐리티 레퍼런스 Part II Chap1 시작하기 부�
 
 이 가이드의 후반부에서는 심도있는 사용자 정의를 하기 위해 이해해야하는 프레임워크 아키텍쳐와 클래스 구현에 대해 깊이있게 다룬다. 반면 이 파트에서는, Spring Security 3.0을 소개하고, 프로젝트 역사에 대해 간단하게 개괄한다. 또, 프레임워크 사용하는 방법에 대해 살짝 들여다본다. 특히, 개별 구현 클래스 전부를 직접 묶어야 했던 전통적인 Spring bean 접근법에 비해 훨씬 간단한 방법인 namespace 설정 방법으로 어플리케이션을 안전하게 하는 것에 대해 살펴본다. 
 
-또, 예제 어플리케이션도 살펴본다. 예제로 실습을 하면, 후반부를 읽는데에 도움이 될 것이다 - 프레임워크에 대한 이해도가 높아진 후에 실습하는 것도 괜찮다. 다음의 웹사이트 [project website | http://static.springsource.org/spring-security/site/index.html] 를 방문하면 프로젝트를 빌드하는데 유용한 정보와 글, 영상, 튜토리얼을 확인할 수 있다.
+또, 예제 어플리케이션도 살펴본다. 예제로 실습을 하면, 후반부를 읽는데에 도움이 될 것이다 - 프레임워크에 대한 이해도가 높아진 후에 실습하는 것도 괜찮다. 다음의 웹사이트 [project website] (http://static.springsource.org/spring-security/site/index.html) 를 방문하면 프로젝트를 빌드하는데 유용한 정보와 글, 영상, 튜토리얼을 확인할 수 있다.
 
 
 ### 1. 도입
@@ -119,7 +119,7 @@ You should always test your application thoroughly before rolling out a new vers
 
 ### 1.4 Spring Security 불러오기
 
-Spring Security를 불러오는 방법에는 몇가지가 있다. 메인 페이지 [Spring Security | http://spring.io/spring-security] 에서 배포판 패키지를 다운로드받거나, Maven Central repository에서 개별 jars를(혹은 SpringSource Maven repository에서 snapshot과 milestone releases를)받거나, 소스에서 직접 빌드할 수 있다.
+Spring Security를 불러오는 방법에는 몇가지가 있다. 메인 페이지 [Spring Security]( http://spring.io/spring-security) 에서 배포판 패키지를 다운로드받거나, Maven Central repository에서 개별 jars를(혹은 SpringSource Maven repository에서 snapshot과 milestone releases를)받거나, 소스에서 직접 빌드할 수 있다.
 
 #### 1.4.1 maven을 이용한 방법
 
