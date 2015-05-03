@@ -348,6 +348,20 @@ img { max-width: 100%; vertical-align: middle; }
     height: 100%;
 }
 
+.about img{
+    border-radius: 40%
+    height: 128px;
+    width: 128px;
+    margin: 0 auto;
+    display: block;
+    vertical-align: middle;
+}
+
+.about span{
+    margin: auto 5px;
+    font-size : 11px;
+}
+
 .contact li {
     display: inline-block;
     padding: 0.2em;
@@ -355,7 +369,7 @@ img { max-width: 100%; vertical-align: middle; }
 .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
-  font-size: 14px;
+  font-size: 13px;
   h4{
     font-size: $base-font-size;
     font-weight: bold;
