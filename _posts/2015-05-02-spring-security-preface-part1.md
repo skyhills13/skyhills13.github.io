@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Spring Security reference Part 1. 서문
+title: Spring Security reference Part I. 서문
 category: reference
 tag: [spring_security, translation]
-description: 스프링 시큐리티 레퍼런스 파트1입니다.
+description: 스프링 시큐리티 레퍼런스 파트I입니다.
 ---
 
-# Spring Security 레퍼런스
-----------------------
 <strong>Authors</strong>
 Ben Alex; Luke Taylor; Rob Winch; Gunnar Hillert
 
 
-Spring Security는 강력한 사용자 정의 인증 프레임워크이자 접근 제어 프레임 워크이다. Spring 기반의 응용 프로그램 보안을 위한 실질적인 표준이다. 
+Spring Security는 강력한 사용자 정의 인증 프레임워크이자 접근 제어 프레임 워크다. Spring 기반의 응용 프로그램 보안을 위한 실질적인 표준이다. 
 
 
-## 서문
+## PART I. 서문
 -------
 
 Spring Security는 Java EE 기반의 엔터프라이즈 소프트웨어를 위한 통합 보안 솔루션을 제공한다. 본 레퍼런스 가이드를 읽으며 발견하겠지만, 유용한 보안 시스템을 제공하기 위해 노력했다.
