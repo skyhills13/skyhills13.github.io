@@ -181,7 +181,7 @@ milestone 이나 release candidate 버전을 사용한다면, 아래와 같은 S
 ```
 
 
-###### Spring Framework Bom
+##### Spring Framework Bom
 
 Spring Security는 스프링 프레임워크의 버전 4.1.6.RELEASE 와 달라도 빌드될 수 있다. 하지만 4.0.x 대의 버전이어야 한다. 많은 유저들이 이러한 Spring Security의 이행적 의존성(transitive dependencies)이 스프링 프레임워크 4.1.6.RELEASE에 녹아드는 것(resolve)으로 인해 이상한 클래스패스 문제에 빠진다.
 
@@ -224,7 +224,7 @@ dependencies {
 만약 LDAP, OpenID 등을 사용한다면 적절한 [modules]도 포함시켜야한다.
 
 
-###### Gradle Repositories
+##### Gradle Repositories
 
 모든 GA releases (.RELEASE로 끝나는 버전)는 Maven Central에 올라가있으므로  mavenCentral() repository를 이용하는 것이면 충분하다.
 
@@ -257,7 +257,7 @@ repositories {
 ```
 
 
-###### Spring 4.0.x 과 Gradle
+##### Spring 4.0.x 과 Gradle
 
 그래들은 transitive 버전을 변환할 때 디폴트로 최신의 버전을 사용한다. 즉, Spring Security 4.0.1.RELEASE 를 Spring Framework 4.1.6.RELEASE에서 사용할 때, 다른 추가적인 작업이 필요 없을 수도 있다는 뜻이다. 그러나 문제가 생길 수도 있으므로 아래와 같이 [ Gradle's ResolutionStrategy ](http://www.gradle.org/docs/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html)를 이용해서 사전에 방지하는 것이 좋겠다:
 

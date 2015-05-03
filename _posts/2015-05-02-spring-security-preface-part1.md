@@ -3,7 +3,7 @@ layout: post
 title: Spring Security reference Part I. 서문
 category: reference
 tag: [spring_security, translation]
-description: 스프링 시큐리티 레퍼런스 파트I입니다.
+description: 스프링 시큐리티 레퍼런스 Part I 입니다.
 ---
 
 <strong>Authors</strong>
