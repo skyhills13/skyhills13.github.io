@@ -7,11 +7,17 @@ author: Soeun Park
 ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown when ShowContactInfo == True
 
 # Build settings:
-markdown: kramdown
+markdown: redcarpet
 
-kramdown:
-    input: GFM
-    hard_wrap: false
+redcarpet:
+    extensions: 
+      - no_intra_emphasis
+      - fenced_code_blocks
+      - tables
+      - strikethrough
+      - superscript
+      - autolink
+      - hard_wrap
 
 highlighter: pygments
 permalink: pretty
