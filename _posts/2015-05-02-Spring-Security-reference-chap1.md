@@ -153,6 +153,7 @@ Spring Security를 불러오는 방법에는 몇가지가 있다. 메인 페이�
 SNAPSHOT 버전을 사용한다면, 아래와 같은 Spring Snapshot repository를 정의했는지 확인해야한다:
 
 <Strong>pom.xml</Strong>
+
 ```
 <repositories>
 <!-- ... possibly other repository elements ... -->
@@ -167,6 +168,7 @@ SNAPSHOT 버전을 사용한다면, 아래와 같은 Spring Snapshot repository�
 milestone 이나 release candidate 버전을 사용한다면, 아래와 같은 Spring Milestone repository를 정의했는지 확인해야한다:
 
 <Strong>pom.xml</Strong>
+
 ```
 <repositories>
 <!-- ... possibly other repository elements ... -->
@@ -183,7 +185,7 @@ milestone 이나 release candidate 버전을 사용한다면, 아래와 같은 S
 
 Spring Security는 스프링 프레임워크의 버전 4.1.6.RELEASE 와 달라도 빌드될 수 있다. 하지만 4.0.x 대의 버전이어야 한다. 많은 유저들이 이러한 Spring Security의 이행적 의존성(transitive dependencies)이 스프링 프레임워크 4.1.6.RELEASE에 녹아드는 것(resolve)으로 인해 이상한 클래스패스 문제에 빠진다.
 
-이 문제를 피하는 하나의 (따분한) 방법은 pom에 모든 스프링 프레임워크 모듈 [dependencyManagement | http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Management] 을 포함시키는 것이다. 다른 방법으로는 아래와 같이 `pom.xml`의 `<dependencyManagement>` 섹션에 `spring-framework-bom`를 포함시키는 것이다:
+이 문제를 피하는 하나의 (따분한) 방법은 pom에 모든 스프링 프레임워크 모듈 [[ dependencyManagement | http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Management]] 을 포함시키는 것이다. 다른 방법으로는 아래와 같이 `pom.xml`의 `<dependencyManagement>` 섹션에 `spring-framework-bom`를 포함시키는 것이다:
 
 <Strong>pom.xml</Strong>
 
@@ -211,6 +213,7 @@ NOTE: 이 접근법은 메이븐의 "bill of materials" (BOM) 컨셉을 이용�
 최소한의 그래들용 의존성 코드는 다음과 같다:
 
 <strong>build.gradle</strong>
+
 ```
 dependencies {
 	compile 'org.springframework.security:spring-security-web:{spring-security-version}'
@@ -226,6 +229,7 @@ dependencies {
 모든 GA releases (.RELEASE로 끝나는 버전)는 Maven Central에 올라가있으므로  mavenCentral() repository를 이용하는 것이면 충분하다.
 
 <strong>.build.gradle</strong>
+
 ```
 repositories {
 	mavenCentral()
@@ -235,6 +239,7 @@ repositories {
 SNAPSHOT 버전을 사용한다면, 아래와 같이 정의된 Spring Snapshot repository가 있는지 확인해야한다:
 
 <strong>.build.gradle</strong>
+
 ```
 repositories {
 	maven { url 'https://repo.spring.io/snapshot' }
@@ -244,6 +249,7 @@ repositories {
 milestone 이나 release candidate 버전을 사용한다면, 아래와 같은 Spring Milestone repository를 정의했는지 확인해야한다:
 
 <strong>.build.gradle</strong>
+
 ```
 repositories {
 	maven { url 'https://repo.spring.io/milestone' }
@@ -253,9 +259,10 @@ repositories {
 
 ###### Spring 4.0.x 과 Gradle
 
-그래들은 transitive 버전을 변환할 때 디폴트로 최신의 버전을 사용한다. 즉, Spring Security 4.0.1.RELEASE 를 Spring Framework 4.1.6.RELEASE에서 사용할 때, 다른 추가적인 작업이 필요 없을 수도 있다는 뜻이다. 그러나 문제가 생길 수도 있으므로 아래와 같이 [Gradle's ResolutionStrategy | http://www.gradle.org/docs/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html ]를 이용해서 사전에 방지하는 것이 좋겠다:
+그래들은 transitive 버전을 변환할 때 디폴트로 최신의 버전을 사용한다. 즉, Spring Security 4.0.1.RELEASE 를 Spring Framework 4.1.6.RELEASE에서 사용할 때, 다른 추가적인 작업이 필요 없을 수도 있다는 뜻이다. 그러나 문제가 생길 수도 있으므로 아래와 같이 [[ Gradle's ResolutionStrategy | http://www.gradle.org/docs/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html ]]를 이용해서 사전에 방지하는 것이 좋겠다:
 
 <strong>build.gradle</strong>
+
 ```
 configurations.all {
 	resolutionStrategy.eachDependency { DependencyResolveDetails details ->
