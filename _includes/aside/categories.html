@@ -2,7 +2,7 @@
   <h4> Categories </h4>
   {% for cat in site.categories %}
   <li>
-      <a href="{{ site.baseurl }}/categories/#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a>
+      <a href="/search/?categories={{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a>
     </li>
   {% endfor %}
 </div>
