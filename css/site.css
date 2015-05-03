@@ -307,7 +307,7 @@ ul.posts .date {
 
 article h1 {
   margin-bottom: 0;
-  line-height: 120%;
+  line-height: 95%;
   text-align: center;
 }
 
@@ -317,7 +317,8 @@ article h1 {
   border-top: 1px solid #ccc;*/
   margin-top: 4px;
   padding: 4px 8px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  font-size: 80%;
 }
 
 .convinced { margin: 6em 0 4em 0;}
@@ -336,6 +337,10 @@ article h1 {
 .post code {
   background-color: #EAEAEA;
   padding: 0 .2em;
+}
+
+.post p {
+    font-size: 85%;
 }
 
 /* terminal */
