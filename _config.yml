@@ -1,5 +1,10 @@
-# Site settings
+# Site info
 title: skyhills blog
+email: skyhills13@gmail.com
+author: Soeun Park
+
+# Site setting
+ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown when ShowContactInfo == True
 
 # Build settings:
 markdown: kramdown
@@ -10,3 +15,6 @@ safe: true
 lsi: false
 
 paginate : 5
+
+# Personal Info path
+# aboutme_photo: 

@@ -99,6 +99,7 @@ a.discreet {
 .fancy, section, article {
   font-family: "Titillium Web", Helvetica, Arial, sans-serif;
   line-height: 170%;
+  max-width: 700px;
 }
 
 
@@ -124,7 +125,7 @@ a.discreet {
 /* Header and navigation */
 header {
   margin: auto;
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -282,7 +283,7 @@ ul.posts .date {
 
 .site {
   text-align: justify;
-  max-width: 800px;
+  max-width: 900px;
   margin: 1em auto 1em;
   line-height: 1.5em;
 }
@@ -323,6 +324,50 @@ article h1 {
 
 .convinced { margin: 6em 0 4em 0;}
 
+/*****************************************************************************/
+/*
+/* aside
+/*
+/*****************************************************************************/
+@media screen and (min-width: 600px) {
+  .site-aside { 
+  } 
+}
+
+/*
+* Images 
+img { max-width: 100%; vertical-align: middle; }
+*/
+    
+
+.site-aside {
+    float: right;
+    max-width: 150px;
+    min-height: 1px;
+    margin: 0px 15px;
+    height: 100%;
+}
+
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+  font-size: 14px;
+  h4{
+    font-size: $base-font-size;
+    font-weight: bold;
+    color: $grey-color-dark;
+  }
+  li{
+    list-style: none; 
+  }
+
+}
+
+.sidebar-module a.tag{
+    text-decoration: overline;
+    text-align: justify;
+}
+    
 
 /*****************************************************************************/
 /*
@@ -414,6 +459,11 @@ img.inline.pull-right {
 
 img {
   max-width: 100%;
+}
+
+article img {
+    display: block;
+    margin: 0 auto;
 }
 
 .gist {
