@@ -16,7 +16,7 @@ Single page의 경우에는 목차부터 끝까지 한 페이지에서 스크롤
 
 ### Single Page
 
-[한번에보기](https://rawgit.com/skyhills13/ko-spring-security-reference/blob/master/reference/htmlsingle/index.html)
+[한번에보기](https://rawgit.com/skyhills13/ko-spring-security-reference/master/reference/htmlsingle/index.html)
 
 ### Multiple Pages
 
