@@ -27,3 +27,9 @@ Single page의 경우에는 목차부터 끝까지 한 페이지에서 스크롤
 [PartII. 시작하기](https://rawgit.com/skyhills13/ko-spring-security-reference/blob/master/reference/html/getting-started.html)
 [Chap1. 소개](https://rawgit.com/skyhills13/ko-spring-security-reference/blob/master/reference/html/introduction.html)
 <sub>history와 release numbering은 최후순위로 미룹니다.</sub>
+[Chap2. Spring Security 4.0의 새로운 점](https://rawgit.com/skyhills13/ko-spring-security-reference/master/reference/html/new.html)
+<sub>해당 챕터는 통째로 후순위로 미룹니다.</sub>
+
+###### 15/05/14
+
+[Chap3. Java Configuration](https://rawgit.com/skyhills13/ko-spring-security-reference/master/reference/html/jc.html)
