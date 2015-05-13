@@ -5,7 +5,9 @@ category: blog
 tags: [spring_security, open_source, java, translation ]
 ---
 
-_____________
+
+**
+----------------------
 
 오픈 소스에 커밋을 하고 싶다는 생각을 해왔다.
 관련 글을 여럿 읽고 나서 내가 쉽게 할 수 있는 번역부터 해보자고 마음을 먹었고, 
@@ -37,7 +39,8 @@ Getting started guide의 특정 리파지토리에 Apache Licence와 CCL을 동�
 그리하여 Spring Security와의 여정이 시작되었다.
 
 
-_____________
+**
+----------------------
 
 그리고 오늘이 번역 첫번째 날이었다.
 하. 힘들다. 눈이 아프다. 누니건조하다.
